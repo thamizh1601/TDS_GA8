@@ -1,0 +1,18 @@
+source,target,value
+Social Media,Awareness,467
+Email,Awareness,312
+Referral,Awareness,289
+Direct,Awareness,245
+Paid Ads,Awareness,198
+Awareness,Interest,523
+Awareness,Bounce,488
+Interest,Consideration,412
+Interest,Bounce,111
+Consideration,Intent,356
+Consideration,Bounce,56
+Intent,Evaluation,298
+Intent,Bounce,58
+Evaluation,Purchase,267
+Evaluation,Bounce,31
+Purchase,Loyalty,189
+Purchase,Churn,78
