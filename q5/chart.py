@@ -66,9 +66,19 @@ plt.legend(title='Customer Segment', loc='upper left', framealpha=0.9)
 # Adjust layout
 plt.tight_layout()
 
-# Save chart with exact 512x512 dimensions
-plt.savefig('chart.png', dpi=64, bbox_inches='tight', facecolor='white', edgecolor='none')
+# Save chart at higher resolution first
+plt.savefig('chart_temp.png', dpi=100, bbox_inches='tight', facecolor='white', edgecolor='none')
 plt.close()
+
+# Resize to exactly 512x512 pixels using PIL
+from PIL import Image
+img = Image.open('chart_temp.png')
+img_resized = img.resize((512, 512), Image.Resampling.LANCZOS)
+img_resized.save('chart.png')
+
+# Clean up temp file
+import os
+os.remove('chart_temp.png')
 
 print("Chart saved as chart.png (512x512 pixels)")
 print("Author: 22f2000116@ds.study.iitm.ac.in")
