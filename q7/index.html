@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Performance Analysis - 22f2000116@ds.study.iitm.ac.in</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a2e;
+            color: #eaeaea;
+        }
+
+        h1,
+        h2 {
+            color: #00d4ff;
+        }
+
+        .code-block {
+            background: #16213e;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #00d4ff;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        .email {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .output {
+            background: #0f3460;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Employee Performance Analysis</h1>
+    <p><strong>Author:</strong> <span class="email">22f2000116@ds.study.iitm.ac.in</span></p>
+    <p><strong>Email:</strong> <span class="email">22f2000116@ds.study.iitm.ac.in</span></p>
+
+    <h2>Python Code Generated with LLM Assistance</h2>
+    <p>This code was generated with LLM assistance for <span class="email">22f2000116@ds.study.iitm.ac.in</span></p>
+
+    <div class="code-block">
+        <pre><code># Employee Performance Analysis
+# Author: 22f2000116@ds.study.iitm.ac.in
+# Generated with ChatGPT/LLM assistance
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import io
+import base64
+
+# Sample employee data
+data = """employee_id,department,region,performance_score,years_experience,satisfaction_rating
+EMP001,R&D,North America,67.01,13,4.2
+EMP002,IT,Europe,64.96,10,4.3
+EMP003,Finance,Europe,68.51,3,4
+EMP004,Operations,Latin America,86.74,3,3.6
+EMP005,Sales,Middle East,92.94,15,4.8
+EMP006,Operations,North America,78.23,7,4.1
+EMP007,HR,Asia Pacific,72.45,5,3.9
+EMP008,Operations,Europe,81.67,9,4.4
+EMP009,IT,North America,69.88,6,4.0
+EMP010,Sales,Latin America,88.12,11,4.6
+EMP011,Operations,Middle East,75.34,4,3.8
+EMP012,R&D,Asia Pacific,70.21,8,4.2
+EMP013,Finance,North America,82.56,12,4.5
+EMP014,Operations,Europe,79.45,6,4.0
+EMP015,HR,Latin America,73.89,5,3.7
+EMP016,IT,Middle East,66.78,4,3.9
+EMP017,Operations,Asia Pacific,84.23,10,4.3
+EMP018,Sales,North America,91.45,14,4.7
+EMP019,R&D,Europe,68.90,7,4.1
+EMP020,Operations,Latin America,77.56,8,4.2"""
+
+# Load the data
+df = pd.read_csv(io.StringIO(data))
+
+# Calculate frequency count for Operations department
+operations_count = df[df['department'] == 'Operations'].shape[0]
+print(f"Frequency count for Operations department: {operations_count}")
+
+# Create histogram of department distribution
+plt.figure(figsize=(10, 6))
+sns.set_style("whitegrid")
+
+# Count plot (histogram for categorical data)
+ax = sns.countplot(data=df, x='department', palette='viridis', order=df['department'].value_counts().index)
+
+plt.title('Distribution of Employees by Department', fontsize=14, fontweight='bold')
+plt.xlabel('Department', fontsize=12)
+plt.ylabel('Frequency Count', fontsize=12)
+plt.xticks(rotation=45, ha='right')
+
+# Add count labels on bars
+for p in ax.patches:
+    ax.annotate(f'{int(p.get_height())}', 
+                (p.get_x() + p.get_width() / 2., p.get_height()),
+                ha='center', va='bottom', fontsize=11, fontweight='bold')
+
+plt.tight_layout()
+plt.savefig('department_histogram.png', dpi=100, bbox_inches='tight')
+plt.show()
+
+# Author: 22f2000116@ds.study.iitm.ac.in</code></pre>
+    </div>
+
+    <h2>Output</h2>
+    <div class="output">
+        <p><strong>Frequency count for Operations department: 7</strong></p>
+        <p>(Based on the sample dataset with 20 employees)</p>
+    </div>
+
+    <h2>Department Distribution Histogram</h2>
+    <p>The histogram below shows the distribution of employees across different departments:</p>
+
+    <!-- SVG Histogram Visualization -->
+    <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg"
+        style="background: #f8f9fa; border-radius: 8px;">
+        <!-- Title -->
+        <text x="300" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Distribution of
+            Employees by Department</text>
+
+        <!-- Y-axis label -->
+        <text x="20" y="200" text-anchor="middle" font-size="12" fill="#666" transform="rotate(-90, 20, 200)">Frequency
+            Count</text>
+
+        <!-- X-axis label -->
+        <text x="330" y="385" text-anchor="middle" font-size="12" fill="#666">Department</text>
+
+        <!-- Y-axis -->
+        <line x1="80" y1="50" x2="80" y2="320" stroke="#333" stroke-width="1" />
+        <!-- X-axis -->
+        <line x1="80" y1="320" x2="560" y2="320" stroke="#333" stroke-width="1" />
+
+        <!-- Y-axis ticks and labels -->
+        <text x="70" y="320" text-anchor="end" font-size="10" fill="#666">0</text>
+        <text x="70" y="252" text-anchor="end" font-size="10" fill="#666">2</text>
+        <text x="70" y="185" text-anchor="end" font-size="10" fill="#666">4</text>
+        <text x="70" y="118" text-anchor="end" font-size="10" fill="#666">6</text>
+        <text x="70" y="50" text-anchor="end" font-size="10" fill="#666">8</text>
+
+        <!-- Grid lines -->
+        <line x1="80" y1="252" x2="560" y2="252" stroke="#ddd" stroke-width="1" />
+        <line x1="80" y1="185" x2="560" y2="185" stroke="#ddd" stroke-width="1" />
+        <line x1="80" y1="118" x2="560" y2="118" stroke="#ddd" stroke-width="1" />
+        <line x1="80" y1="50" x2="560" y2="50" stroke="#ddd" stroke-width="1" />
+
+        <!-- Bars - Operations (7) -->
+        <rect x="100" y="84" width="60" height="236" fill="#440154" rx="3" />
+        <text x="130" y="76" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">7</text>
+        <text x="130" y="345" text-anchor="middle" font-size="10" fill="#666">Operations</text>
+
+        <!-- Bars - IT (3) -->
+        <rect x="180" y="219" width="60" height="101" fill="#31688e" rx="3" />
+        <text x="210" y="211" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">3</text>
+        <text x="210" y="345" text-anchor="middle" font-size="10" fill="#666">IT</text>
+
+        <!-- Bars - Sales (3) -->
+        <rect x="260" y="219" width="60" height="101" fill="#35b779" rx="3" />
+        <text x="290" y="211" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">3</text>
+        <text x="290" y="345" text-anchor="middle" font-size="10" fill="#666">Sales</text>
+
+        <!-- Bars - R&D (3) -->
+        <rect x="340" y="219" width="60" height="101" fill="#fde725" rx="3" />
+        <text x="370" y="211" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">3</text>
+        <text x="370" y="345" text-anchor="middle" font-size="10" fill="#666">R&D</text>
+
+        <!-- Bars - Finance (2) -->
+        <rect x="420" y="252" width="60" height="68" fill="#21918c" rx="3" />
+        <text x="450" y="244" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">2</text>
+        <text x="450" y="345" text-anchor="middle" font-size="10" fill="#666">Finance</text>
+
+        <!-- Bars - HR (2) -->
+        <rect x="500" y="252" width="60" height="68" fill="#5ec962" rx="3" />
+        <text x="530" y="244" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">2</text>
+        <text x="530" y="345" text-anchor="middle" font-size="10" fill="#666">HR</text>
+    </svg>
+
+    <h2>Analysis Summary</h2>
+    <ul>
+        <li><strong>Operations</strong> department has the highest employee count (7 employees)</li>
+        <li><strong>IT, Sales, R&D</strong> each have 3 employees</li>
+        <li><strong>Finance and HR</strong> have the lowest count (2 employees each)</li>
+    </ul>
+
+    <hr>
+    <p><em>Generated with LLM assistance for <span class="email">22f2000116@ds.study.iitm.ac.in</span></em></p>
+</body>
+
+</html>
