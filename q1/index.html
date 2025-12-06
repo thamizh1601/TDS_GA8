@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Email: 22f2000116@ds.study.iitm.ac.in -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quarterly Earnings Report</title>
+    <meta name="author" content="22f2000116@ds.study.iitm.ac.in">
+    <meta name="description" content="Quarterly Earnings Report by 22f2000116@ds.study.iitm.ac.in">
+    <title>Quarterly Earnings Report - 22f2000116@ds.study.iitm.ac.in</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
@@ -30,11 +37,20 @@
         <div class="slides">
             <!-- Title Slide -->
             <section>
-                <h1>Q4 2024 Earnings Report</h1>
+                <h1>22f2000116@ds.study.iitm.ac.in</h1>
+                <h2>Q4 2024 Earnings Report</h2>
                 <h3>Financial Performance & Strategic Outlook</h3>
-                <p style="text-align: center; margin-top: 50px;">
-                    <small>Prepared by: 22f2000116@ds.study.iitm.ac.in</small><br>
+                <p style="text-align: center; margin-top: 50px; font-size: 1.2em;">
+                    <strong>Prepared by: 22f2000116@ds.study.iitm.ac.in</strong>
+                </p>
+                <p style="text-align: center;">
                     <small>December 2024</small>
+                </p>
+                <p style="text-align: center; margin-top: 30px;">
+                    <a href="mailto:22f2000116@ds.study.iitm.ac.in">22f2000116@ds.study.iitm.ac.in</a>
+                </p>
+                <p style="text-align: center; margin-top: 20px; font-size: 1.5em; color: #42affa;">
+                    22f2000116@ds.study.iitm.ac.in
                 </p>
                 <aside class="notes">
                     Welcome everyone to our Q4 2024 earnings presentation. Today we'll cover our financial performance, key metrics, and strategic initiatives for the coming year.
@@ -99,8 +115,7 @@
             <!-- Code Sample Slide -->
             <section>
                 <h2>Risk Analytics Pipeline</h2>
-                <pre><code class="python" data-line-numbers="1-2|4-6|8-12|14-15">
-import pandas as pd
+                <pre><code class="python">import pandas as pd
 import numpy as np
 
 # Load customer transaction data
@@ -116,12 +131,33 @@ def calculate_exposure(df):
 
 # Generate daily risk reports
 exposure_summary = calculate_exposure(transactions)
-                </code></pre>
+</code></pre>
                 <p style="font-size: 0.7em; margin-top: 30px;">
                     Our automated risk analytics processes 15M+ transactions daily
                 </p>
                 <aside class="notes">
                     This is a simplified version of our risk analytics pipeline. The actual system uses distributed computing and real-time streaming for immediate fraud detection.
+                </aside>
+            </section>
+
+            <!-- Additional Code Slide with JavaScript -->
+            <section>
+                <h2>API Integration Example</h2>
+                <pre><code class="javascript">// Fetch real-time market data
+async function getMarketData() {
+    const response = await fetch('/api/market-data');
+    const data = await response.json();
+    
+    // Calculate portfolio value
+    const totalValue = data.holdings.reduce((sum, stock) => {
+        return sum + (stock.shares * stock.price);
+    }, 0);
+    
+    return totalValue;
+}
+</code></pre>
+                <aside class="notes">
+                    Our API handles thousands of requests per second for real-time market data updates.
                 </aside>
             </section>
 
@@ -193,7 +229,10 @@ exposure_summary = calculate_exposure(transactions)
                 <p class="fragment" style="text-align: center; margin-top: 60px; font-size: 1.3em;">
                     <strong>Thank You!</strong>
                 </p>
-                <p style="text-align: center; margin-top: 20px;">
+                <p style="text-align: center; margin-top: 20px; font-size: 1.1em; color: #42affa;">
+                    <strong>22f2000116@ds.study.iitm.ac.in</strong>
+                </p>
+                <p style="text-align: center; margin-top: 10px;">
                     <small>Contact: 22f2000116@ds.study.iitm.ac.in</small>
                 </p>
                 <aside class="notes">
@@ -210,6 +249,10 @@ exposure_summary = calculate_exposure(transactions)
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
     <script>
+        // Initialize highlight.js first
+        hljs.highlightAll();
+        
+        // Then initialize Reveal
         Reveal.initialize({
             hash: true,
             controls: true,
@@ -218,6 +261,16 @@ exposure_summary = calculate_exposure(transactions)
             center: true,
             transition: 'slide',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+        
+        // Highlight again after Reveal is ready
+        Reveal.on('ready', () => {
+            hljs.highlightAll();
+        });
+        
+        // Highlight on slide change
+        Reveal.on('slidechanged', () => {
+            hljs.highlightAll();
         });
     </script>
 </body>
