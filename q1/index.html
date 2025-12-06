@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Earnings Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .reveal .slides section {
+            text-align: left;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-align: center;
+        }
+        .email-footer {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            font-size: 0.5em;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section>
+                <h1>Q4 2024 Earnings Report</h1>
+                <h3>Financial Performance & Strategic Outlook</h3>
+                <p style="text-align: center; margin-top: 50px;">
+                    <small>Prepared by: 22f2000116@ds.study.iitm.ac.in</small><br>
+                    <small>December 2024</small>
+                </p>
+                <aside class="notes">
+                    Welcome everyone to our Q4 2024 earnings presentation. Today we'll cover our financial performance, key metrics, and strategic initiatives for the coming year.
+                </aside>
+            </section>
+
+            <!-- Markdown Slide -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Executive Summary
+                    
+                    ### Key Highlights
+                    
+                    - **Revenue Growth**: 23% YoY increase
+                    - **Net Profit Margin**: Improved to 18.5%
+                    - **Customer Acquisition**: 2.3M new customers
+                    - **Digital Transformation**: 85% digital adoption
+                    
+                    ---
+                    
+                    ### Strategic Priorities
+                    
+                    1. Expand market presence in emerging economies
+                    2. Invest in AI-driven financial solutions
+                    3. Enhance cybersecurity infrastructure
+                    4. Improve customer experience platforms
+                </textarea>
+                <aside class="notes">
+                    Our Q4 performance exceeded expectations across all key metrics. The 23% revenue growth was driven primarily by our digital banking initiatives and new product launches.
+                </aside>
+            </section>
+
+            <!-- Animated Fragments Slide -->
+            <section>
+                <h2>Revenue Breakdown by Segment</h2>
+                <ul style="font-size: 0.9em; margin-top: 50px;">
+                    <li class="fragment fade-in">
+                        <strong>Retail Banking:</strong> $2.4B (40%) 
+                        <span class="fragment highlight-green">↑ 15%</span>
+                    </li>
+                    <li class="fragment fade-in">
+                        <strong>Corporate Banking:</strong> $1.8B (30%) 
+                        <span class="fragment highlight-green">↑ 28%</span>
+                    </li>
+                    <li class="fragment fade-in">
+                        <strong>Investment Services:</strong> $1.2B (20%) 
+                        <span class="fragment highlight-green">↑ 31%</span>
+                    </li>
+                    <li class="fragment fade-in">
+                        <strong>Digital Products:</strong> $600M (10%) 
+                        <span class="fragment highlight-blue">↑ 45%</span>
+                    </li>
+                </ul>
+                <p class="fragment fade-up" style="text-align: center; margin-top: 50px; font-size: 1.2em;">
+                    <strong>Total Revenue: $6.0B</strong>
+                </p>
+                <aside class="notes">
+                    Notice the exceptional growth in our Digital Products segment at 45%. This validates our strategic investment in fintech solutions and mobile banking platforms.
+                </aside>
+            </section>
+
+            <!-- Code Sample Slide -->
+            <section>
+                <h2>Risk Analytics Pipeline</h2>
+                <pre><code class="python" data-line-numbers="1-2|4-6|8-12|14-15">
+import pandas as pd
+import numpy as np
+
+# Load customer transaction data
+transactions = pd.read_csv('customer_transactions.csv')
+risk_scores = pd.read_csv('risk_assessment.csv')
+
+# Calculate risk-weighted metrics
+def calculate_exposure(df):
+    df['risk_weighted_exposure'] = (
+        df['transaction_amount'] * df['risk_score']
+    )
+    return df.groupby('customer_id')['risk_weighted_exposure'].sum()
+
+# Generate daily risk reports
+exposure_summary = calculate_exposure(transactions)
+                </code></pre>
+                <p style="font-size: 0.7em; margin-top: 30px;">
+                    Our automated risk analytics processes 15M+ transactions daily
+                </p>
+                <aside class="notes">
+                    This is a simplified version of our risk analytics pipeline. The actual system uses distributed computing and real-time streaming for immediate fraud detection.
+                </aside>
+            </section>
+
+            <!-- Mathematical Equations Slide -->
+            <section>
+                <h2>Financial Metrics & Formulas</h2>
+                <div style="margin-top: 50px;">
+                    <h3>Return on Equity (ROE)</h3>
+                    <p style="text-align: center; font-size: 1.2em;">
+                        \[ROE = \frac{\text{Net Income}}{\text{Shareholders' Equity}} \times 100\%\]
+                    </p>
+                    <p class="fragment" style="text-align: center; margin-top: 30px;">
+                        <strong>Q4 2024 ROE: 16.8%</strong>
+                    </p>
+                </div>
+                <div class="fragment" style="margin-top: 50px;">
+                    <h3>Risk-Adjusted Return</h3>
+                    <p style="text-align: center; font-size: 1.2em;">
+                        \[\text{Sharpe Ratio} = \frac{R_p - R_f}{\sigma_p}\]
+                    </p>
+                    <p style="text-align: center; margin-top: 20px; font-size: 0.8em;">
+                        Where \(R_p\) = Portfolio Return, \(R_f\) = Risk-free Rate, \(\sigma_p\) = Standard Deviation
+                    </p>
+                </div>
+                <aside class="notes">
+                    Our ROE of 16.8% exceeds the industry average of 12.3%. The Sharpe Ratio helps us evaluate risk-adjusted performance of our investment portfolios.
+                </aside>
+            </section>
+
+            <!-- More Equations -->
+            <section>
+                <h2>Capital Adequacy Ratio</h2>
+                <div style="margin-top: 50px;">
+                    <p style="text-align: center; font-size: 1.1em;">
+                        \[\text{CAR} = \frac{\text{Tier 1 Capital} + \text{Tier 2 Capital}}{\text{Risk-Weighted Assets}} \times 100\%\]
+                    </p>
+                    <div class="fragment" style="margin-top: 50px;">
+                        <p style="text-align: center;"><strong>Our Performance:</strong></p>
+                        <ul style="font-size: 0.9em; margin-top: 30px;">
+                            <li>Tier 1 Capital: $8.2B</li>
+                            <li>Tier 2 Capital: $2.1B</li>
+                            <li>Risk-Weighted Assets: $52.4B</li>
+                            <li class="fragment highlight-green"><strong>CAR: 19.7%</strong> (Regulatory minimum: 10.5%)</li>
+                        </ul>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Our CAR of 19.7% demonstrates strong capital position, well above regulatory requirements. This provides us flexibility for strategic investments and acquisitions.
+                </aside>
+            </section>
+
+            <!-- Closing Slide -->
+            <section>
+                <h2>Looking Ahead: 2025 Targets</h2>
+                <div style="margin-top: 50px; font-size: 0.9em;">
+                    <div class="fragment">
+                        <h3>Revenue Targets</h3>
+                        <p>🎯 $7.2B total revenue (20% growth)</p>
+                    </div>
+                    <div class="fragment" style="margin-top: 30px;">
+                        <h3>Digital Expansion</h3>
+                        <p>🚀 Launch AI-powered wealth management platform</p>
+                    </div>
+                    <div class="fragment" style="margin-top: 30px;">
+                        <h3>Market Expansion</h3>
+                        <p>🌍 Enter 3 new international markets</p>
+                    </div>
+                </div>
+                <p class="fragment" style="text-align: center; margin-top: 60px; font-size: 1.3em;">
+                    <strong>Thank You!</strong>
+                </p>
+                <p style="text-align: center; margin-top: 20px;">
+                    <small>Contact: 22f2000116@ds.study.iitm.ac.in</small>
+                </p>
+                <aside class="notes">
+                    In closing, we're well-positioned for continued growth. Our strategic investments in technology and market expansion will drive value for our stakeholders. Thank you for your continued support.
+                </aside>
+            </section>
+        </div>
+    </div>
+
+    <div class="email-footer">22f2000116@ds.study.iitm.ac.in</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'slide',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+</html>
